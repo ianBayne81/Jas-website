@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgb(184, 182, 184), rgb(9, 9, 9) 70%);
+} 
+
+#page-container {
+    height: auto;
+    width: 800px;
+    position: relative;
+    display: block;
+    text-align: center;
+    background: linear-gradient(0deg, rgb(236, 212, 236), rgb(80,20,80) 70%);
+    overflow: hidden;
+}
+
+#header {
+    height: 80px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.name {
+    height: 70px;
+    width: auto;
+    color: white;
+    font-family: "Cinzel", serif;
+    font-size: 50px;
+    font-weight: 800;
+    background-color: rgb(80, 20, 80);
+}
+
+#menu {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    background-color: rgb(80, 20, 80); 
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#menu-button {
+    height: 30px;
+    width: 30px;
+    margin-left: 50px;
+    cursor: pointer;
+    border: none;
+}
+
+#menu-button:hover {
+    transform: scale(1.2)
+}
+
+#svg-dropDown {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(80, 20, 80);
+    border: 2px solid white;
+}
+
+.lines {
+    stroke: white;
+    stroke-width: 5;
+}
+
+.spin{
+    width: 100%;
+    stroke: white;
+    stroke-width: 5;
+    transition: 1s ease-in; 
+    transform-origin: center;
+}
+
+.rotateSpin {
+    transition: 1s ease-in;
+    transform-origin: center;
+    transform: rotateZ(360deg)
+}
+
+.dropDown {
+    height: 30px;
+    width: 350px;
+    top: 150px; 
+    left:0;
+    right:0;
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: darkmagenta;
+    transition: all 1s ease-in; 
+}
+.dropDownActive {
+    top: 180px; 
+    transition: all 1s ease-in; 
+}
+
+.select {
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+    background-color: transparent;
+    color: gold;
+    border: none;
+    cursor: pointer;
+}
+
+.select:hover {
+    text-decoration: underline;
+    transform: scale(1.1)
+}
+
+#personal-content {
+    height: 250px;
+    width: 300px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 2px solid white;
+    background-image: url("/images/Jas21.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#youtube-content {
+    height: 250px;
+    width: 300px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 2px solid white;
+    background-image: url("/images/Jas26.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+#youTube {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    bottom: 15px;
+    left: 100px;
+    cursor: pointer;
+    background-color: rgba(80, 20, 80, .4);
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+}
+
+#youTube:hover {
+    animation-name: rotate;
+    animation-duration: 1.5s;
+    animation-iteration-count: initial;
+    animation-timing-function: linear;
+}
+
+.box-container {
+    height: 300px;
+    width: 170px;
+    position: absolute;
+    top: 200px;
+    left: -140px; 
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: all 1s ease-in;
+}
+
+.box-active {
+    left: -30px;
+    transition: all 1s ease-in;
+}
+
+.boxButton {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+}
+
+#svg-sideBar {
+    height: 100%;
+    width: 100%;
+    background-color: pink;
+}
+
+.arrowOne {
+    stroke: black;
+    stroke-width: 2;
+    transition-duration: 1.5s;
+}
+
+.arrowTwo {
+    stroke: black;
+    stroke-width: 2;
+    transition-duration: 1.5s;
+}
+
+.arrowOne-active {
+    transform-origin: center;
+    transform: rotate(-55deg);
+    transition-duration: 1.5s;
+} 
+
+.arrowTwo-active {
+    transform-origin: center;
+    transform: rotate(55deg);
+    transition-duration: 1.5s;
+}
+
+#para-box {
+    height: 260px;
+    width: 110px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: pink;
+}
+
+#para {
+    margin: 10px;
+    font-size: 22px;
+}
+
+#gallery-content {
+    height: 250px;
+    width: 300px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: black;
+    border: 2px solid white;
+    overflow: hidden;  
+}
+
+.gallery-slider {
+    height: 250px;
+    width: 1500px;
+    position: absolute;
+    left: -1200px;
+    display: inline-flex;
+    background-color: transparent;
+    transition: left 20s linear;
+}
+
+.gallery-slider-active {
+    left: 0px;
+    transition: left 20s linear;
+}
+
+#slide {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    bottom: 20px;
+    left: 135px;
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+#slide:hover {
+    transform: scale(1.1)
+}
+
+#svg-gallery {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.slide-arrow {
+    stroke: white;
+    stroke-width: 1;
+}
+
+.gallery-divs {
+    height: 250px;
+    width: 300px;
+    position: relative;
+    
+}
+ 
+#imageOne {
+    background-image: url("/images/indexbg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+#imageTwo {
+    background-image: url("/images/Jas19.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#imageThree {
+    background-image: url("/images/Jas24.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#imageFour {
+    background-image: url("/images/Jas22.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#imageFive {
+    background-image: url("/images/Jas3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#footer {
+    height: 100px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+#facebook {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    background-image: url("/images/facebook.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#instagram {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    background-image: url("/images/instagram.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#gmail {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    background-image: url("/images/gmail.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width:0px) and (max-width: 500px) {
+
+    #page-container {
+        width: 100vw;
+    }
+
+    .dropDown {
+        height: 90px;
+        width: 100px;
+        top: 80px;
+        display: block;
+    }
+    .dropDownActive {
+        top: 180px;
+    }
+
+    #menu-button {
+        margin-left: 20px;
+    }
+    .select {
+        font-size: 20px;
+    }
+
+    #personal-content {
+        height: 200px;
+        width: 250px;
+    }
+    .box-container {
+        height: 320px;
+    }
+
+    #para-box {
+        height: 280px;
+    }
+
+    #youtube-content {
+        height: 200px;
+        width: 250px;
+    }
+
+    #youTube {
+        left: 75px;
+    }
+
+    #gallery-content {
+        height: 200px;
+        width: 250px;
+    }
+
+    .gallery-slider {
+        height: 200px;
+        width: 1250px;
+        left: -1000px;
+    }
+
+    #slide {
+        left: 110px;
+    }
+
+    .gallery-slider-active {
+        left: 0px;
+    }
+
+    .gallery-divs {
+        height: 200px;
+        width: 250px;
+    }
+
+
+}

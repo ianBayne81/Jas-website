@@ -1,0 +1,2 @@
+(()=>{const e=document.querySelector("#input");document.querySelector("#button").addEventListener("click",(function(t){t.preventDefault(),"Jingles"===e.value?location.assign("/pageTwo.html"):(alert("Password is incorrect"),e.value="")}))})();
+//# sourceMappingURL=index-bundle.js.map

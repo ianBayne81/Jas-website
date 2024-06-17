@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    max-width: 100vw;
+    background-image: url("/images/Jas29.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#login-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgb(236, 212, 236), rgb(80,20,80) 70%);
+    opacity: .8;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+#login-container {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 5px solid gold;
+    border-radius: 100%;
+    background-color: transparent;
+}
+
+.login {
+    margin-top: 10px;
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+    color: gold;
+    background: transparent;
+    border: none;
+}
+
+.login-heading {
+    margin-top: 40px;
+    height: 50px;
+    width: 200px;
+    font-size: 50px;
+    text-align: center;
+    color: gold;
+    background: transparent;
+    border: none;
+}
+
+#heading {
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#input {
+    text-align: center;
+}
+
+#input:focus {
+    outline: 1px solid gold;
+}
+
+::placeholder {
+    color: gold;
+    text-align: center;
+}
+
+#button:hover {
+    transform: scale(1.2);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media screen and (min-width:0px) and (max-width: 500px) {  
+
+    body {
+        background-image: url("/images/Jas19.jpg");
+    }
+
+ }
+
+ 
